@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("C:\ProgramData\Jenkins\.jenkins\workspace\TestReposiorty_main") {
+                {
                 sh 'mvn -B -DskipTests clean package'
                 }
             }
