@@ -10,9 +10,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               withMaven(maven : 'maven-3.8.6') {
-                   sh './test.sh'
-               bat'mvn clean compile'
+               //withMaven(maven : 'maven-3.8.6') {
+                   bat 'test.bat'
+               //bat'mvn clean compile'
                }
             }
             }
