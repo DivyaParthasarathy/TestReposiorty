@@ -17,8 +17,9 @@ pipeline {
         stage('Build') {
             steps {
                withMaven(maven : 'maven-3.8.6') {
-               bat'mvn clean compile'
                    sh './test.sh'
+               bat'mvn clean compile'
+                   
 }
                 
             }
