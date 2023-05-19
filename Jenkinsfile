@@ -8,21 +8,20 @@ pipeline {
         jdk "jdk19"
     }
     stages {
-        stage('Initialize'){
-            steps{
-                echo "PATH = ${M2_HOME}/bin:${PATH}"
-                echo "M2_HOME = /opt/maven"
-            }
-        }
         stage('Build') {
             steps {
                withMaven(maven : 'maven-3.8.6') {
                    sh './test.sh'
                bat'mvn clean compile'
-                   
-}
-                
+               }
             }
         }
-     } 
+        /*stage('Initialize'){
+            steps{
+                echo "PATH = ${M2_HOME}/bin:${PATH}"
+                echo "M2_HOME = /opt/maven"
+            }
+        }/*
+        
+                
 }
