@@ -15,6 +15,7 @@ pipeline {
                bat'mvn clean compile'
                }
             }
+            }
         }
         /*stage('Initialize'){
             steps{
